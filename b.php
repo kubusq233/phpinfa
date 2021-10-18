@@ -12,8 +12,8 @@ $haslo = $_POST['haslo']; //pobieranie hasla
 
 $zap = "SELECT * FROM `loguj`"; //zapytanie wybierajace wszystkie pola z tabeli loguj
 $wyn = mysqli_query($con, $zap); 
-while($row = mysqli_fetch_array($wyn))
-{
+$row = mysqli_fetch_array($wyn);
+
 	$has = $row['haslo'];
 	$log = $row['login'];
 	
@@ -32,7 +32,7 @@ while($row = mysqli_fetch_array($wyn))
 		{
 			echo "Zły login<br/>";
 		}
-}
+		
 	var_dump($_POST);
 	mysqli_close($con);
 ?>
