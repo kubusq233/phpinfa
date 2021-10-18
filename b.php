@@ -14,8 +14,8 @@ $zap = "SELECT * FROM `loguj`"; //zapytanie wybierajace wszystkie pola z tabeli 
 $wyn = mysqli_query($con, $zap); 
 $row = mysqli_fetch_array($wyn);
 
-	$has = $row['haslo'];
-	$log = $row['login'];
+	$has = $row['haslo']; //zmienna przyjmuje wartosc z kolumny haslo
+	$log = $row['login']; //zmienna przyjmuje wartosc z kolumny login
 	
 	if($login == $log) //sprawdzanie czy login jest poprawny
 	{
